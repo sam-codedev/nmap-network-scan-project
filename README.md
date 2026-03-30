@@ -87,4 +87,10 @@ To reduce the risks found during the scan, the following actions are advised:
 
 After entering the password, the installation was successful.
 The terminal confirmed that Nmap version 7.95 was installed from the Snap store.
-   
+
+## Service Version Scan
+   ![image alt](https://github.com/sam-codedev/nmap-network-scan-project/blob/55cd340bde5e004b782b706f9908d0e82d9d98de/nmap-sV.jpg)
+
+   This shows the result of running the command:
+   ```bash
+   nmap -sV 127.0.0.1
