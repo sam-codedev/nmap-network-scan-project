@@ -95,7 +95,7 @@ The terminal confirmed that Nmap version 7.95 was installed from the Snap store.
 
     nmap -sV 127.0.0.1p
 
-### What Happened
+### Which Happened
 - The scan was done on **127.0.0.1** (localhost).  
 - Nmap checked all TCP ports and found that most were closed.  
 - One port, **631/tcp**, was open.  
@@ -105,3 +105,24 @@ The terminal confirmed that Nmap version 7.95 was installed from the Snap store.
 - Detecting service versions helps us know exactly what software is running.  
 - With this information, we can check if the service has known vulnerabilities.  
 - In this case, the printing service is only available locally, which lowers the risk.
+
+## Vulnerability Scan
+   ![image alt](https://github.com/sam-codedev/nmap-network-scan-project/blob/85432c11043f6da3f35a1f76333236fb42e014d2/vuln-result.jpg)
+
+   This shows the result of running the command:
+
+    nmap -sV -p 631 --script=vuln 127.0.0.1
+
+### Which Happened
+
+-The scan focused on port 631/tcp, which was already detected as open.
+-Nmap confirmed that the service running on this port is CUPS 2.4 (Common Unix Printing System).
+-The vulnerability scripts reported several known issues and possible exploits linked to this service.
+-Some results also suggested possible admin directories that could be sensitive if exposed.
+
+### Why It Matters
+
+-Vulnerability scans help us check if the detected service has security problems.
+-Knowing the CVEs and exploit references allows us to understand the severity of the risk.
+-In this case, the service is only accessible locally, which reduces the chance of external attacks, but the vulnerabilities are still important to fix.
+   
