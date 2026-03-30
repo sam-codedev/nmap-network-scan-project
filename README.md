@@ -142,3 +142,29 @@ The terminal confirmed that Nmap version 7.95 was installed from the Snap store.
 - The web interface proves that the service is active and reachable on the local machine.  
 - It shows how administrators can manage printers, policies, and configurations.  
 - If this page were exposed to external networks, it could be a security risk, so keeping it local is safer.
+
+## Port Check and Service Exposure
+   ![image alt](https://github.com/sam-codedev/nmap-network-scan-project/blob/aa1eaf9e43aa59fe1dd17ae44f6200465d95246d/tulnp.jpg)
+
+   This shows the result of checking open ports and verifying service exposure.
+
+### Which Happened
+- The Nmap scan listed several possible folders and admin paths that could exist on the server.  
+- After the scan, the command `ss -tulnp | grep 631` was used to check if port **631/tcp** was listening.  
+- The output confirmed that the port is open and bound to **127.0.0.1** and **[::1]**, which means it is only accessible locally.
+
+### Why It Matters
+- Checking with `ss` helps confirm that the service is not exposed to external networks.  
+- Even though vulnerabilities were detected earlier, limiting access to localhost reduces the risk of outside attacks.  
+- This step shows how to verify whether a service is reachable from outside or only from the local machine.
+
+## Disclaimer
+
+This project is for **learning and practice purposes only**.  
+All scans were performed on the local machine using the IP address **127.0.0.1 (localhost)**.  
+
+- No external or public systems were scanned.  
+- The results only show services running on the local computer.  
+- This project does not expose sensitive information.  
+
+It is safe to make this repository public because the IPs used are standard local addresses and do not reveal private or external networks.
