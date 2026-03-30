@@ -126,3 +126,19 @@ The terminal confirmed that Nmap version 7.95 was installed from the Snap store.
 -Knowing the CVEs and exploit references allows us to understand the severity of the risk.
 -In this case, the service is only accessible locally, which reduces the chance of external attacks, but the vulnerabilities are still important to fix.
    
+## CUPS Web Interface
+   ![image alt](https://github.com/sam-codedev/nmap-network-scan-project/blob/ddcf787ac5d01a23f0f8e571604fcbb89cadb1cb/browser-page.jpg)
+
+   This shows the local web page for **CUPS 2.4.1**, accessed at:
+   
+      http://127.0.0.1:631 (127.0.0.1 in Bing)
+
+### Which Happened
+- After scanning the system, the service on port **631/tcp** was confirmed to be CUPS.  
+- Opening the address in a browser displayed the CUPS web interface.  
+- The page provides sections for **Users**, **Administrators**, and **Developers**, with links to documentation and management options.
+
+### Why It Matters
+- The web interface proves that the service is active and reachable on the local machine.  
+- It shows how administrators can manage printers, policies, and configurations.  
+- If this page were exposed to external networks, it could be a security risk, so keeping it local is safer.
