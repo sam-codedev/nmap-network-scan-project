@@ -68,3 +68,23 @@ To reduce the risks found during the scan, the following actions are advised:
 
 3. **Apply Firewall Restrictions**  
    Use firewall rules to control access to the service. Allow only trusted connections and block unnecessary traffic.
+
+## Installing Nmap
+   ![image alt](https://github.com/sam-codedev/nmap-network-scan-project/blob/4e94576c55dcd18384effee77a28ccb5e28b6d73/Nmap-ver.jpg)
+
+   It shows the process of installing **Nmap** on a Linux system.
+
+1. At first, the user tried to run the command `nmap`.  
+   The system replied that the command was not found, which means Nmap was not installed yet.
+
+2. The terminal suggested two ways to install Nmap:  
+   - `sudo snap install nmap` (version 7.95)  
+   - `sudo apt install nmap` (an older version available in Ubuntu repositories)
+
+3. The user chose the **snap method** and typed:  
+   ```bash
+   sudo snap install nmap
+
+After entering the password, the installation was successful.
+The terminal confirmed that Nmap version 7.95 was installed from the Snap store.
+   
